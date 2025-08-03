@@ -42,9 +42,9 @@ async function main() {
  await mongoose.connect(DB_url);
 };
 
-// app.get('/', (req, res) => {
-//   res.send('this is root route');    
-// });
+app.get('/', (req, res) => {
+  res.redirect('/listings');  
+});
 
 const store = MongoStore.create({
   mongoUrl: DB_url,
