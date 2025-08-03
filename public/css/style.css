@@ -1,0 +1,218 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important ;
+    font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.container{
+    flex:1;
+}
+
+/* navbar */
+.navbar{
+    height: 4.5rem;
+    background-color: white;
+}
+.fa-plane-departure{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+/* footer */
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, .f-info-socials,
+.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.f-info-socials i{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.f-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    background-color: #ebebeb;
+    height: 8rem;
+    text-align: center;
+}
+
+/* cards */
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+      
+}
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important; 
+    object-fit: cover !important;
+}
+
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card.text{
+    font-weight: 400 !important;
+}
+
+.card-link{
+    text-decoration: none;
+}
+
+
+/* card effect */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.5;
+    background-color: white;
+}
+
+/* new page */
+.create-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* edit page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show page */
+
+.show-img{
+    height: 30vh;
+}
+
+.edit-link{
+    text-decoration: none;
+    color:white;
+}
+
+.delete-btn{
+    padding: 10px;
+}
+.btns{
+    display: flex;
+    
+}
+
+/* map */
+
+#map { 
+     height: 400px;
+        width: 100%;
+        border: 2px solid #333;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+/* map-style.css */
+.marker-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-marker {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* 
+search bar */
+
+  .search-btn{
+    background-color: #fe424d !important;
+    color: white !important;
+    border-radius: 50% !important;
+    padding: 0.5rem  0.8rem!important;
+    font-size: 1.2rem !important;
+  }
+  .search-btn:hover{
+    background-color: #c93b44 !important;
+    color: white !important;
+  }
+  .search-inp{
+    border-radius: 2rem !important;
+    padding: 0 5rem 0 5rem !important;
+    height: 2.5rem !important;
+  }
+  .search-bar{
+   display: flex;
+   align-items: center;
+  }
+
+
+  /* navbar options */
+
+
+    #filters{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .filter{
+        text-align: center;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        opacity: 0.6;
+    }
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    .filter p{
+        font-size: 0.8rem;
+    }
+    #tax-info{
+        display: none;
+    }
+    .tax-switch{
+        border: 1px solid black;
+       height: 3.2rem;
+        padding: 1rem;
+        border-radius: 15px;
+        margin-left: 2.5rem;
+        display: flex;
+        align-items: center;
+      
+    }
