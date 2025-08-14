@@ -89,5 +89,8 @@ module.exports.destroyListing =async (req,res)=>{
 module.exports.filterListing = async(req,res)=>{
   let {category} = req.params;
   const listings = await Listing.find({category:category});
+   if (listings.length === 0) {
+    req.flash("error", `No listings found for ${category}`);
+  }
   res.render('listings/index.ejs', {listings} );
 };

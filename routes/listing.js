@@ -53,7 +53,8 @@ router.get("/:id/edit",
 );
 
 //filter route
-router.get("/category/:category",listingcontrollers.filterListing);
+router.get("/category/:category",
+  WrapAsync(listingcontrollers.filterListing));
 
 module.exports = router;
 
