@@ -216,3 +216,9 @@ search bar */
         align-items: center;
       
     }
+
+
+.filter-option{
+    text-decoration: none;
+    color: black;
+}

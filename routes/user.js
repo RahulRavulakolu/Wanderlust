@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user.js');
+
 const WrapAsync = require('../utils/WrapAsync');
 const passport = require('passport');
 const { savedRedirectUrl } = require('../middleware.js');
@@ -22,7 +22,7 @@ router.route('/login')
         failureRedirect: '/login',
         failureFlash:true }),
         usercontrollers.login
-   );
+    );
 
 router.get('/logout', usercontrollers.logOut);
 module.exports = router;

@@ -5,6 +5,7 @@ const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.allListings = async (req, res) => {
     const listings = await Listing.find({});
+    
     res.render('listings/index.ejs', {listings} );
 }
 
@@ -82,4 +83,11 @@ module.exports.destroyListing =async (req,res)=>{
     const listing = await Listing.findByIdAndDelete(id);
     req.flash("success","Listing Deleted Successfully!");
     res.redirect("/listings")
+};
+
+
+module.exports.filterListing = async(req,res)=>{
+  let {category} = req.params;
+  const listings = await Listing.find({category:category});
+  res.render('listings/index.ejs', {listings} );
 };

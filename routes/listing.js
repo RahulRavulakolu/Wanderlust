@@ -52,4 +52,9 @@ router.get("/:id/edit",
   WrapAsync(listingcontrollers.editListingForm)
 );
 
+//filter route
+router.get("/category/:category",listingcontrollers.filterListing);
+
 module.exports = router;
+
+
