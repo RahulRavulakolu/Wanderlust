@@ -3,21 +3,21 @@
     let mapboxToken = "<%= process.env.MAPBOX_TOKEN %>";
     let listing = <%- JSON.stringify(listing) %>;
 </script>
-<body>
-    <div class="row">
-        <div class="col-8 offset-3 mt-3">
+<body class="show-page">
+    <div class="row show-page-content">
+        <div class="col-12 col-md-8 offset-md-2 mt-3">
              <h3><b><%= listing.title %></b></h3>
         </div>
-        <div class="card col-6 offset-3 show-card listing-card" >
+        <div class="card col-12 col-md-8 offset-md-2 show-card listing-card" >
                 <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
                 <div class="card-body">
                     <p class="card-text mt-2">
                         Owned By: <i><strong><%= listing.owner.username %></strong></i><br><br>
                         Description: &nbsp; <%= listing.description %> <br><br>
                         Price: &nbsp; &#8377;<%= Number(listing.price).toLocaleString("en-IN") %> <br><br>
-                        Location: &nbsp; <%= listing.location %> <br><br>   
-                        Country:&nbsp; <%= listing.country %> <br>
-                        Category:&nbsp; <%= listing.category %> <br>
+                        Location: &nbsp; <%= listing.location %> <br><br>     
+                        Country:&nbsp; <%= listing.country %> <br><br>
+                        Category:&nbsp; <%= listing.category %>
                     </p>
                 </div>
         </div>
@@ -35,7 +35,7 @@
         <% } %>
     </div>
     <hr>
-    <div class="col-8 offset-3">
+    <div class="col-12 col-md-8 offset-md-2">
         <% if(currentUser) { %>
         <h3>Leave a Review</h3>
         <form class="needs-validation" method="post" action="/listings/<%= listing._id %>/review" novalidate >
@@ -84,9 +84,9 @@
              <h3 class="mt-2">All Reviews</h3>
         <% } %>
        
-        <div class="row">
+        <div class="row reviews-container">
             <% for (review of listing.reviews){ %> 
-                <div class="card col-5 mb-3 ms-3" >  
+                <div class="card col-12 col-md-5 mb-3" >  
                     <div class="card-body mb-3">
                             <h5 class="card-title mt-3">@<%= review.author.username %></h5>
                             <p class="starability-result" data-rating="<%= review.rating %>">
@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <div class="col-8 offset-3 mb-3">
+    <div class="col-12 col-md-8 offset-md-2 mb-3">
         <h4>Where you'll be</h4>
         <div id="map"></div>
     </div>
