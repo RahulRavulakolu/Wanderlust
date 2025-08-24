@@ -1,4 +1,4 @@
-# 🌍 Wanderlust - Travel & Accommodation Platform
+# 🛫 Wanderlust - Travel & Accommodation Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-16.x-brightgreen)](https://nodejs.org/)
